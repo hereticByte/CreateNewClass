@@ -1,0 +1,6 @@
+
+
+-main Main
+-cp src
+
+-js "bin/js/main-javascript.js"

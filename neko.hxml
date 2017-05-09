@@ -1,0 +1,8 @@
+-cp src
+-main Main
+
+-neko neko/neko.n
+
+
+--macro Main.compilerDirector()
+#--macro haxe.macro.Compiler.excludeFile( "src.package01.package02.NewClass" )
