@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"main-javascript.js",
+"sourceRoot":"file:///",
+"sources":["C:/HaxeToolkit/haxe/std/js/_std/HxOverrides.hx","D:/IO/HAXE/_zzzExperimentalProjects/macro/createNewClass/src/Main.hx","C:/HaxeToolkit/haxe/std/js/_std/Reflect.hx","C:/HaxeToolkit/haxe/std/js/_std/Type.hx","D:/IO/HAXE/_zzzExperimentalProjects/macro/createNewClass/src/package01/package02/AnotherClass.hx"],
+"names":[],
+"mappings":";;;qBAuHQ,gBAA4C;AAAA,CAClD,QAAQ,UAAU;CAClB,EAAI,MAAK,IAAK;AAAA,SAAO;;CACrB,SAAS,EAAE;CACX,OAAO;;;YC6GE,WACP;AAAA,CAEI,YAAO;CACP,YAAO;CACP,YAAO;CACP,YAAO;CAGP,YAAO,iBAAiB;CAExB,aAA6B,oBAAqB;CAElD;YAAc,eAAd;AAAA,EAAK,YAAL,AAAc,OAAd;;EACI,YAAO;;;;iBCpMJ,YAA+C;AAAA,CAC5D,QAAQ;CACR,EAAI,MAAK,MAAc;AAAA,EACtB,qBAAqB;EACrB;EACA,EAAI,MAAK,YAAY,KAAK,oBAAoB,oBAAoB,EAAG,IAAK;AAAA,UAAO;;EACjF;;CAED,OAAO;;;sBCyFM,YAA8D;AAAA,CAC3E,QAAQ,eAAe;CACvB,qBAAS;CACT,qBAAS;CACT,qBAAS;CACT,qBAAS;CACT,qBAAS;CACT,qBAAS;CACT,OAAO;;;kDClJS,WAEV;AAAA,aAAO;;;sDHyJe,WAEZ;AAAA;;0CAH6B;;;;"
+}

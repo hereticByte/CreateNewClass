@@ -3,4 +3,9 @@
 -main Main
 -cp src
 
+--macro Main.compilerDirector()
+
 -js "bin/js/main-javascript.js"
+
+
+-debug

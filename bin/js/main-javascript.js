@@ -15,8 +15,8 @@ Main.main = function() {
 	console.log("main()");
 	console.log("main()");
 	console.log("main()");
-	console.log("NewClass.x: " + package01_package02_NewClass.x);
-	var fields = Type.getClassFields(package01_package02_NewClass);
+	console.log("NewClass.x: " + package01.package02.NewClassSurrogate.x);
+	var fields = Type.getClassFields(package01.package02.NewClassSurrogate);
 	var _g = 0;
 	while(_g < fields.length) {
 		var field = fields[_g];
@@ -48,10 +48,16 @@ Type.getClassFields = function(c) {
 	HxOverrides.remove(a,"prototype");
 	return a;
 };
-var package01_package02_NewClass = function() { };
-package01_package02_NewClass.callSomething = function() {
-	console.log("x");
+var package01_package02_AnotherClass = function() { };
+package01_package02_AnotherClass.traceSomething = function() {
+	console.log("Something...");
 };
-package01_package02_NewClass.x = "What the fuck? It still does not work.";
+var package01_package02_NewClassSurrogate = function() { };
+package01_package02_NewClassSurrogate.callSomething = function() {
+	package01_package02_AnotherClass.traceSomething();
+};
+package01_package02_NewClassSurrogate.x = "Great!";
 Main.main();
 })();
+
+//# sourceMappingURL=main-javascript.js.map

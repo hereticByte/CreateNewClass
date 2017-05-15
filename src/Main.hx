@@ -1,6 +1,8 @@
 package ;
 
 
+import package01.package02.NewClass;
+
 #if macro
 import haxe.macro.Compiler;
 import haxe.macro.Context;
@@ -43,18 +45,51 @@ class Main
     #if macro
     public static function compilerDirector() : Void
     {
-        // Compiler.excludeFile( "D:/IO/HAXE/_zzzExperimentalProjects/macro/createNewClass/src/package01/package02/NewClass.hx" );
-
-        // var newClassClassPathName : String = "package01.package02.NewClass";
-        // Compiler.exclude( newClassClassPathName );
-
-        // trace( Std.string( Context.getType( newClassClassPathName ) ) );
+        trace( "15.05.2017" );
 
         Context.onAfterTyping( onAfterTypingCallback );
-        // Context.onTypeNotFound( onTypeNotFoundCallback );
+
+        // Context.onGenerate( onGenerateCallBack );
+
 
     } // public static function compilerDirector() : Void
 
+/*
+
+    public static function onGenerateCallBack( allTypes : Array<Type> ) : Void
+    {
+        trace( "onGenerateCallBack()" );
+
+        for( type in allTypes )
+        {
+            switch( type )
+            {
+                // TInst(t:Ref<ClassType>, params:Array<Type>)
+                case Type.TInst( clType, _ ) :
+                {
+                    var classType : ClassType = clType.get();
+
+                    trace( "classType.meta: " + classType.meta.get() );
+
+                    if( classType.module == "package01.package02.NewClassSurrogate" )
+                    {
+                        trace( "package01.package02.NewClassSurrogate was found." );
+
+                        classType.meta.add(
+                                            ":keep",
+                                            [],
+                                            ( macro null ).pos
+                                        );
+                        trace( "classType.meta: " + classType.meta.get() );
+                    } // if( classType.module == "package01.package02.NewClassSurrogate" )
+
+
+                } // case Type.TInst( clType, _ ) :
+            } // switch( type )
+
+        } // for( type in allTypes )
+    } // public static function onGenerateCallBack( allTypes : Array<Type> ) : Void
+*/
 
 
 
@@ -204,9 +239,9 @@ switch( newClassType )
         trace( "main()" );
 
         // trace( "AnotherClass.xyz: " + package01.package02.AnotherClass.xyz );
-        trace( "NewClass.x: " + package01.package02.NewClass.x );
+        trace( "NewClass.x: " + NewClass.x );
 
-        var fields : Array<String> = Type.getClassFields( package01.package02.NewClass );
+        var fields : Array<String> = Type.getClassFields( NewClass );
 
         for( field in fields )
             trace( field );
